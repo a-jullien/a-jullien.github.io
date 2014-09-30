@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archeflu</title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 30 Sep 2014 22:32:09 +0200</pubDate>
+    <lastBuildDate>Tue, 30 Sep 2014 22:32:09 +0200</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Mon blog par Jekyll!</title>
+        <description>&lt;p&gt;C’est fait, je me suis enfin décidé à créer un blog. Pour cela, j’utilise &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 
+un générateur de site statique très simple à utiliser, écrit en Ruby. Les raisons d’avoir choisi cet outil plutôt 
+qu’un CMS de type &lt;a href=&quot;http://www.joomla.fr&quot;&gt;Joomla&lt;/a&gt; ou &lt;a href=&quot;https://fr.wordpress.org/&quot;&gt;WordPress&lt;/a&gt; sont tout d’abord 
+sa simplicité à mettre en place. Jekyll est effectivement libre de tout couplage fort avec une base de données 
+puisqu’il génère votre site en html depuis vos templates (&lt;a href=&quot;http://liquidmarkup.org&quot;&gt;Liquid&lt;/a&gt;) et vos contenus HTML ou Markdown.&lt;/p&gt;
+
+&lt;p&gt;Enfin Jekyll est supporté pleinement par &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; permettant d’héberger gratuitement 
+vos contenus en ligne, ce qui est plutôt cool.  &lt;/p&gt;
+
+&lt;p&gt;Dans ce blog, j’essayerai simplement de partager sur tout ce qui touche de près ou de loin au développement logiciel, 
+à mes expérimentations techniques, mais aussi à celles d’autres développeurs, en essayant toujours d’avoir un oeil critique.     &lt;/p&gt;
+</description>
+        <pubDate>Tue, 30 Sep 2014 23:00:24 +0200</pubDate>
+        <link>/jekyll/update/2014/09/30/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">/jekyll/update/2014/09/30/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

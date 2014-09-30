@@ -1,0 +1,9 @@
+# Site settings
+title: Archeflu
+email: antoine.jullien@gmail.com
+description:
+baseurl: "" # the subpath of your site, e.g. /blog/
+github_username:  a-jullien
+
+# Build settings
+markdown: kramdown
