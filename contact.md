@@ -6,4 +6,4 @@ permalink: /contact/
 ### Antoine Jullien
 
 Développeur passionné, je navigue principalement dans le monde Java et celui de l'agilité, 
-en essayant d'améliorer continuellement mes pratiques.
+cherchant perpetuellement à développer mes pratiques.
