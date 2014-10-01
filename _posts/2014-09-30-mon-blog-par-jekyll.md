@@ -2,6 +2,7 @@
 layout: post
 title:  "Mon blog par Jekyll!"
 date:   2014-09-30 21:00:24
+tags: [jekyll]
 categories: jekyll update
 ---
 C'est fait, je me suis enfin décidé à créer un blog. Pour cela, j'utilise [Jekyll](http://jekyllrb.com/) 

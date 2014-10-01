@@ -1,9 +1,11 @@
 # Site settings
 title: Archeflu
 email: antoine.jullien@gmail.com
-description:
+description: Java & Agilité
 baseurl: "" # the subpath of your site, e.g. /blog/
 github_username:  a-jullien
+paginate: 1
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
