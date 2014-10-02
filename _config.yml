@@ -4,7 +4,7 @@ email: antoine.jullien@gmail.com
 description: Java & Agilité
 baseurl: "" # the subpath of your site, e.g. /blog/
 github_username:  a-jullien
-paginate: 1
+paginate: 5
 
 # Build settings
 markdown: kramdown
