@@ -9,18 +9,3 @@ paginate: 5
 # Build settings
 markdown: kramdown
 highlighter: pygments
-
-image:
-  source: assets/images/_fullsize
-  output: generated
-  presets:
-    # Proportional preset
-    users:
-      attr:
-        class: user-portrait
-        itemprop: image
-      width: 350
-    # Scaled and cropped preset
-    half:
-      width: 400
-      height: 400

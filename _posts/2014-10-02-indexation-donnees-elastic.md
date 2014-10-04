@@ -30,7 +30,7 @@ d'écrire et de lire depuis ses indexes.
 * **Replica**: Un réplica permet de gérer la montée en charge lorsqu'un noeud n'est pas en mesure de traiter correctement 
 toutes les demandes
  
-{% img centeredImage /images/ES_Architecture.png width height 'Architecture Elastic Search' 'Architecture Elastic Search' %}
+![Architecture Elastic Search](/images/ES_Architecture.png){: .centeredImage}
 
 ElasticSearch fonctionne sur un principe maître - esclave, où dans un cluster un noeud est désigné comme maître (*primary*) 
 et les autres noeuds comme esclaves (*replica*).
