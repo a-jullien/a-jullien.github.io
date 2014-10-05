@@ -23,18 +23,6 @@
      id="defs4">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient3865">
-      <stop
-         style="stop-color:#607daa;stop-opacity:1;"
-         offset="0"
-         id="stop3867" />
-      <stop
-         style="stop-color:#607daa;stop-opacity:0;"
-         offset="1"
-         id="stop3869" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
        id="linearGradient3857">
       <stop
          style="stop-color:#607daa;stop-opacity:1;"
@@ -64,7 +52,8 @@
        y1="247.79076"
        x2="264.07141"
        y2="247.79076"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.99702607,0,0,1.9107407,0.59372434,-210.52084)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3857"
@@ -73,52 +62,14 @@
        y1="287.79075"
        x2="264.07142"
        y2="287.79075"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3865"
-       id="linearGradient3871"
-       x1="135.21428"
-       y1="329.79075"
-       x2="264.07142"
-       y2="329.79075"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.99677272,0,0,2.0019862,0.64430307,-243.02988)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3833"
-       id="linearGradient3934"
+       id="linearGradient3891"
        gradientUnits="userSpaceOnUse"
-       x1="135.21428"
-       y1="247.79076"
-       x2="264.07141"
-       y2="247.79076"
-       gradientTransform="translate(160,0)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3857"
-       id="linearGradient3936"
-       gradientUnits="userSpaceOnUse"
-       x1="135.21428"
-       y1="287.79075"
-       x2="264.07142"
-       y2="287.79075"
-       gradientTransform="translate(160,0)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3865"
-       id="linearGradient3938"
-       gradientUnits="userSpaceOnUse"
-       x1="135.21428"
-       y1="329.79075"
-       x2="264.07142"
-       y2="329.79075"
-       gradientTransform="translate(160,0)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3833"
-       id="linearGradient3964"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(324,0)"
+       gradientTransform="matrix(0.99702607,0,0,1.9107407,162.59372,-210.52084)"
        x1="135.21428"
        y1="247.79076"
        x2="264.07141"
@@ -126,23 +77,33 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3857"
-       id="linearGradient3966"
+       id="linearGradient3893"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(324,0)"
+       gradientTransform="matrix(0.99677272,0,0,2.0019862,162.6443,-243.02988)"
        x1="135.21428"
        y1="287.79075"
        x2="264.07142"
        y2="287.79075" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3865"
-       id="linearGradient3968"
+       xlink:href="#linearGradient3833"
+       id="linearGradient3931"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(324,0)"
+       gradientTransform="matrix(0.99702607,0,0,1.9107407,326.59372,-210.52084)"
        x1="135.21428"
-       y1="329.79075"
+       y1="247.79076"
+       x2="264.07141"
+       y2="247.79076" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3857"
+       id="linearGradient3933"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.99677272,0,0,2.0019862,326.6443,-243.02988)"
+       x1="135.21428"
+       y1="287.79075"
        x2="264.07142"
-       y2="329.79075" />
+       y2="287.79075" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -151,9 +112,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="255.71429"
-     inkscape:cy="817.77041"
+     inkscape:zoom="1.979899"
+     inkscape:cx="345.95269"
+     inkscape:cy="793.31332"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -172,7 +133,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -281,35 +242,24 @@
          x="518.14282"
          y="209.21933">Noeud 2</tspan></text>
     <rect
-       style="fill:url(#linearGradient3839);stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0;fill-opacity:1.0"
+       style="fill:url(#linearGradient3839);fill-opacity:1;stroke:#000000;stroke-width:1.38023853;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.14071547, 4.14071547;stroke-dashoffset:0"
        id="rect3803"
-       width="127.85714"
-       height="32.857143"
-       x="135.71428"
-       y="231.36218"
-       ry="12.857142"
+       width="127.4769"
+       height="62.781483"
+       x="135.9044"
+       y="231.55231"
+       ry="24.566666"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        inkscape:export-xdpi="105.08"
        inkscape:export-ydpi="105.08" />
     <rect
-       ry="12.857142"
-       y="271.36218"
-       x="135.71428"
-       height="32.857143"
-       width="127.85714"
+       ry="25.73982"
+       y="300.23346"
+       x="135.92059"
+       height="65.779549"
+       width="127.44451"
        id="rect3805"
-       style="fill:url(#linearGradient3863);stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0;fill-opacity:1;opacity:0.67811159"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-ydpi="105.08" />
-    <rect
-       style="fill:url(#linearGradient3871);stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0;fill-opacity:1"
-       id="rect3807"
-       width="127.85714"
-       height="32.857143"
-       x="135.71428"
-       y="313.36218"
-       ry="12.857142"
+       style="opacity:0.6781116;fill:url(#linearGradient3863);fill-opacity:1;stroke:#000000;stroke-width:1.41263056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.23789179, 4.23789179;stroke-dashoffset:0"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        inkscape:export-xdpi="105.08"
        inkscape:export-ydpi="105.08" />
@@ -317,7 +267,7 @@
        xml:space="preserve"
        style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="200.68918"
-       y="250.50504"
+       y="248.50504"
        id="text3821"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
@@ -325,7 +275,7 @@
        inkscape:export-ydpi="105.08"><tspan
          sodipodi:role="line"
          x="200.68918"
-         y="250.50504"
+         y="248.50504"
          id="tspan3892">Shard 0 <tspan
    style="font-weight:bold;-inkscape-font-specification:Sans Bold"
    id="tspan3896">primary</tspan></tspan></text>
@@ -335,191 +285,303 @@
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        sodipodi:linespacing="125%"
        id="text3898"
-       y="290.50504"
+       y="316.50504"
        x="200.68918"
        style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          id="tspan3900"
-         y="290.50504"
+         y="316.50504"
          x="200.68918"
          sodipodi:role="line">Shard 1 <tspan
    id="tspan3902"
    style="font-weight:bold;-inkscape-font-specification:Sans Bold">primary</tspan></tspan></text>
+    <rect
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none"
+       id="rect3057"
+       width="60.609158"
+       height="24.243662"
+       x="137.94673"
+       y="258.38229"
+       ry="12.121831" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="140.00766"
+       y="274.01935"
+       id="text3835"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3837"
+         x="140.00766"
+         y="274.01935"
+         style="font-size:10px">Index <tspan
+   style="font-size:10px;font-style:italic;-inkscape-font-specification:Sans Italic"
+   id="tspan3839">blog</tspan></tspan></text>
+    <rect
+       ry="12.121831"
+       y="258.38229"
+       x="199.94673"
+       height="24.243662"
+       width="60.609158"
+       id="rect3843"
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none" />
+    <rect
+       ry="12.121831"
+       y="330.38229"
+       x="137.94673"
+       height="24.243662"
+       width="60.609158"
+       id="rect3845"
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3847"
+       y="346.01935"
+       x="140.00766"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:10px"
+         y="346.01935"
+         x="140.00766"
+         id="tspan3849"
+         sodipodi:role="line">Index <tspan
+   id="tspan3851"
+   style="font-size:10px;font-style:italic;-inkscape-font-specification:Sans Italic">blog</tspan></tspan></text>
+    <rect
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none"
+       id="rect3853"
+       width="60.609158"
+       height="24.243662"
+       x="199.94673"
+       y="330.38229"
+       ry="12.121831" />
+    <rect
+       inkscape:export-ydpi="105.08"
+       inkscape:export-xdpi="105.08"
+       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
+       ry="24.566666"
+       y="231.55231"
+       x="297.90442"
+       height="62.781483"
+       width="127.4769"
+       id="rect3855"
+       style="fill:url(#linearGradient3891);fill-opacity:1;stroke:#000000;stroke-width:1.38023853;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.14071547, 4.14071547;stroke-dashoffset:0" />
+    <rect
+       inkscape:export-ydpi="105.08"
+       inkscape:export-xdpi="105.08"
+       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
+       style="opacity:0.6781116;fill:url(#linearGradient3893);fill-opacity:1;stroke:#000000;stroke-width:1.41263056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.23789179, 4.23789179;stroke-dashoffset:0"
+       id="rect3857"
+       width="127.44451"
+       height="65.779549"
+       x="297.92059"
+       y="300.23346"
+       ry="25.73982" />
+    <text
+       inkscape:export-ydpi="105.08"
+       inkscape:export-xdpi="105.08"
+       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
+       sodipodi:linespacing="125%"
+       id="text3859"
+       y="248.50504"
+       x="362.68918"
+       style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan3861"
+         y="248.50504"
+         x="362.68918"
+         sodipodi:role="line">Shard 0 <tspan
+   style="font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan3939">replica</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="200.68918"
-       y="332.50504"
-       id="text3904"
+       x="362.68918"
+       y="316.50504"
+       id="text3865"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        inkscape:export-xdpi="105.08"
        inkscape:export-ydpi="105.08"><tspan
          sodipodi:role="line"
-         x="200.68918"
-         y="332.50504"
-         id="tspan3906">Shard 2 <tspan
+         x="362.68918"
+         y="316.50504"
+         id="tspan3867">Shard 1 <tspan
    style="font-weight:bold;-inkscape-font-specification:Sans Bold"
-   id="tspan3908">primary</tspan></tspan></text>
+   id="tspan3941">replica</tspan></tspan></text>
     <rect
-       inkscape:export-ydpi="105.08"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       ry="12.857142"
-       y="231.36218"
-       x="295.71429"
-       height="32.857143"
-       width="127.85714"
-       id="rect3910"
-       style="fill:url(#linearGradient3934);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
-    <rect
-       inkscape:export-ydpi="105.08"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       style="opacity:0.6781116;fill:url(#linearGradient3936);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
-       id="rect3912"
-       width="127.85714"
-       height="32.857143"
-       x="295.71429"
-       y="271.36218"
-       ry="12.857142" />
-    <rect
-       inkscape:export-ydpi="105.08"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       ry="12.857142"
-       y="313.36218"
-       x="295.71429"
-       height="32.857143"
-       width="127.85714"
-       id="rect3914"
-       style="fill:url(#linearGradient3938);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0" />
+       ry="12.121831"
+       y="258.38229"
+       x="299.94672"
+       height="24.243662"
+       width="60.609158"
+       id="rect3871"
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none" />
     <text
-       inkscape:export-ydpi="105.08"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        sodipodi:linespacing="125%"
-       id="text3916"
-       y="250.50504"
-       x="360.68918"
-       style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="text3873"
+       y="274.01935"
+       x="302.00766"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
-         id="tspan3918"
-         y="250.50504"
-         x="360.68918"
-         sodipodi:role="line">Shard 0 replica<tspan
-   id="tspan3920"
-   style="font-weight:bold;-inkscape-font-specification:Sans Bold" /></tspan></text>
+         style="font-size:10px"
+         y="274.01935"
+         x="302.00766"
+         id="tspan3875"
+         sodipodi:role="line">Index <tspan
+   id="tspan3877"
+   style="font-size:10px;font-style:italic;-inkscape-font-specification:Sans Italic">blog</tspan></tspan></text>
+    <rect
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none"
+       id="rect3879"
+       width="60.609158"
+       height="24.243662"
+       x="361.94672"
+       y="258.38229"
+       ry="12.121831" />
+    <rect
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none"
+       id="rect3881"
+       width="60.609158"
+       height="24.243662"
+       x="299.94672"
+       y="330.38229"
+       ry="12.121831" />
     <text
        xml:space="preserve"
-       style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="360.68918"
-       y="290.50504"
-       id="text3922"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-ydpi="105.08"><tspan
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="302.00766"
+       y="346.01935"
+       id="text3883"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="360.68918"
-         y="290.50504"
-         id="tspan3924">Shard 1 replica<tspan
-   style="font-weight:bold;-inkscape-font-specification:Sans Bold"
-   id="tspan3926" /></tspan></text>
-    <text
-       inkscape:export-ydpi="105.08"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       sodipodi:linespacing="125%"
-       id="text3928"
-       y="332.50504"
-       x="360.68918"
-       style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         id="tspan3930"
-         y="332.50504"
-         x="360.68918"
-         sodipodi:role="line">Shard 2 replica</tspan></text>
+         id="tspan3885"
+         x="302.00766"
+         y="346.01935"
+         style="font-size:10px">Index <tspan
+   style="font-size:10px;font-style:italic;-inkscape-font-specification:Sans Italic"
+   id="tspan3887">blog</tspan></tspan></text>
     <rect
-       style="fill:url(#linearGradient3964);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
-       id="rect3940"
-       width="127.85714"
-       height="32.857143"
-       x="459.71429"
-       y="231.36218"
-       ry="12.857142"
+       ry="12.121831"
+       y="330.38229"
+       x="361.94672"
+       height="24.243662"
+       width="60.609158"
+       id="rect3889"
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none" />
+    <rect
+       style="fill:url(#linearGradient3931);fill-opacity:1;stroke:#000000;stroke-width:1.38023853;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.14071547, 4.14071547;stroke-dashoffset:0"
+       id="rect3895"
+       width="127.4769"
+       height="62.781483"
+       x="461.90442"
+       y="231.55231"
+       ry="24.566666"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        inkscape:export-xdpi="105.08"
        inkscape:export-ydpi="105.08" />
     <rect
-       ry="12.857142"
-       y="271.36218"
-       x="459.71429"
-       height="32.857143"
-       width="127.85714"
-       id="rect3942"
-       style="opacity:0.6781116;fill:url(#linearGradient3966);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-ydpi="105.08" />
-    <rect
-       style="fill:url(#linearGradient3968);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0"
-       id="rect3944"
-       width="127.85714"
-       height="32.857143"
-       x="459.71429"
-       y="313.36218"
-       ry="12.857142"
+       ry="25.73982"
+       y="300.23346"
+       x="461.92059"
+       height="65.779549"
+       width="127.44451"
+       id="rect3897"
+       style="opacity:0.6781116;fill:url(#linearGradient3933);fill-opacity:1;stroke:#000000;stroke-width:1.41263056;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.23789179, 4.23789179;stroke-dashoffset:0"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        inkscape:export-xdpi="105.08"
        inkscape:export-ydpi="105.08" />
     <text
        xml:space="preserve"
        style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="524.68921"
-       y="250.50504"
-       id="text3946"
+       x="526.68921"
+       y="248.50504"
+       id="text3899"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        inkscape:export-xdpi="105.08"
        inkscape:export-ydpi="105.08"><tspan
          sodipodi:role="line"
-         x="524.68921"
-         y="250.50504"
-         id="tspan3948">Shard 0 replica<tspan
+         x="526.68921"
+         y="248.50504"
+         id="tspan3901">Shard 0 <tspan
    style="font-weight:bold;-inkscape-font-specification:Sans Bold"
-   id="tspan3950" /></tspan></text>
+   id="tspan3937">replica</tspan></tspan></text>
     <text
        inkscape:export-ydpi="105.08"
        inkscape:export-xdpi="105.08"
        inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
        sodipodi:linespacing="125%"
-       id="text3952"
-       y="290.50504"
-       x="524.68921"
+       id="text3905"
+       y="316.50504"
+       x="526.68921"
        style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
-         id="tspan3954"
-         y="290.50504"
-         x="524.68921"
-         sodipodi:role="line">Shard 1 replica<tspan
-   id="tspan3956"
-   style="font-weight:bold;-inkscape-font-specification:Sans Bold" /></tspan></text>
+         id="tspan3907"
+         y="316.50504"
+         x="526.68921"
+         sodipodi:role="line">Shard 1 <tspan
+   style="font-weight:bold;-inkscape-font-specification:Sans Bold"
+   id="tspan3935">replica</tspan></tspan></text>
+    <rect
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none"
+       id="rect3911"
+       width="60.609158"
+       height="24.243662"
+       x="463.94672"
+       y="258.38229"
+       ry="12.121831" />
     <text
        xml:space="preserve"
-       style="font-size:13px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="524.68921"
-       y="332.50504"
-       id="text3958"
-       sodipodi:linespacing="125%"
-       inkscape:export-filename="/home/tonio/Documents/perso/dev/sites/a-jullien/images/ES_Architecture.png"
-       inkscape:export-xdpi="105.08"
-       inkscape:export-ydpi="105.08"><tspan
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="466.00766"
+       y="274.01935"
+       id="text3913"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="524.68921"
-         y="332.50504"
-         id="tspan3960">Shard 2 replica<tspan
-   style="font-weight:bold;-inkscape-font-specification:Sans Bold"
-   id="tspan3962" /></tspan></text>
+         id="tspan3915"
+         x="466.00766"
+         y="274.01935"
+         style="font-size:10px">Index <tspan
+   style="font-size:10px;font-style:italic;-inkscape-font-specification:Sans Italic"
+   id="tspan3917">blog</tspan></tspan></text>
+    <rect
+       ry="12.121831"
+       y="258.38229"
+       x="525.94672"
+       height="24.243662"
+       width="60.609158"
+       id="rect3919"
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none" />
+    <rect
+       ry="12.121831"
+       y="330.38229"
+       x="463.94672"
+       height="24.243662"
+       width="60.609158"
+       id="rect3921"
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3923"
+       y="346.01935"
+       x="466.00766"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:10px"
+         y="346.01935"
+         x="466.00766"
+         id="tspan3925"
+         sodipodi:role="line">Index <tspan
+   id="tspan3927"
+   style="font-size:10px;font-style:italic;-inkscape-font-specification:Sans Italic">blog</tspan></tspan></text>
+    <rect
+       style="opacity:0.6781116;fill:#e93c15;fill-opacity:0.45882353;stroke:none"
+       id="rect3929"
+       width="60.609158"
+       height="24.243662"
+       x="525.94672"
+       y="330.38229"
+       ry="12.121831" />
   </g>
 </svg>

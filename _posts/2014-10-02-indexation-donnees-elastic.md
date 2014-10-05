@@ -5,9 +5,12 @@ date:   2014-10-02 22:00:24
 tags: [elasticsearch, nosql]
 categories: jekyll update
 ---
-Il y a quelques temps, j'ai commencé à regarder d'un peu plus près l'outil 
-[**ElasticSearch**](http://www.elasticsearch.org/), le super moteur de recherche créé par la société du même nom. 
-Je vais tenter d'expliquer dans cet article comment fonctionne ElasticSearch, et de montrer quels sont les avantages 
+Depuis quelques temps, je commence à regarder d'un peu plus près l'outil 
+[**ElasticSearch**](http://www.elasticsearch.org/), un super moteur de recherche créé par la société du même nom. Il a un 
+ certain engouement autour du paradigme du "big data" et l'exploitation de ces données dans des environnements 
+ [**NoSQL**](http://fr.wikipedia.org/wiki/NoSQL). D'où la nécessité d'avoir des outils simples et performants pour tout se 
+ qui touche à la recherche d'information.
+Je vais donc tenter d'expliquer dans cet article comment fonctionne ElasticSearch, et de montrer quels sont les avantages 
 à l'utiliser dans vos applications.
 
 Tout d'abord, commençons par une petite présentation. ElasticSearch est un moteur de recherche basé sur [**Lucene**](http://lucene.apache.org/).
@@ -100,8 +103,8 @@ Ici, je vais juste changer le nom du cluster et le nom du noeud:
     
 ####Configuration réseau
 Dans cette section, je vais finir sur la configuration d'ElasticSearch en parlant de la configuration réseau. Par défaut, 
-c'est du Multicast qui est utilisé pour l'autodécouverte des noeuds. Seulement, en production par exemple, il est souvent 
-interdit d'utiliser le Multicast. Il y a donc un autre mode qui permet de forcer les IPs (Unicast):
+le Multicast est utilisé pour l'autodécouverte des noeuds. Seulement, en production par exemple, il est souvent 
+interdit de l'utiliser. Il y a donc un autre mode qui permet de forcer les IPs (Unicast):
  
     cluster.name:                       MonSuperCluster
     node.name:                          MonSuperNoeud
@@ -109,4 +112,104 @@ interdit d'utiliser le Multicast. Il y a donc un autre mode qui permet de forcer
     discovery.zen.ping.unicast.hosts:   ["192.168.0.2", "192.168.0.3"]
     
 #API REST
+Comme exposé en introduction, ElasticSearch fournit une api REST pour interagir avec le système.
+ 
+####Meta données
+<i class="fa fa-arrow-circle-right"></i> Informations sur le statut du cluster: 
+
+``$ curl -XGET 'localhost:9200/_cluster/health'``
+
+<i class="fa fa-arrow-circle-right"></i> Informations sur le cluster et ses noeuds:
+
+``$ curl -XGET 'localhost:9200/_nodes'``
+
+<i class="fa fa-arrow-circle-right"></i> Statistiques sur le cluster
+
+``$ curl -XGET 'localhost:9200/_stats'``
+
+####Opérations
+<i class="fa fa-arrow-circle-right"></i> Arrêter un noeud
+
+``$ curl -XPOST 'localhost:9200/_shutdown'``
+
+<i class="fa fa-exclamation-triangle"></i> Pour ce genre d'opération, il est préférable de ne pas exposer directement 
+votre cluster directement. C'est à votre soin de protéger votre cluster, par l'ajout d'un *reverse proxy* pour commencer...
+   
+####Indexer un document
+
+Je veux par exemple indexer un document de type *post* dans l'index *blog*:
+
+    $ curl -XPUT localhost:9200/blog/post/1 -d 
+    '{
+    "title": "Mon super post de test",
+     "text": "Ma description du post",
+    "author": "Antoine JULLIEN"
+    }'
+
+Le résultat sera alors un document JSON qui ressemblera à ça:
+
+    {
+    "ok":true,
+    "_index":"blog",
+    "_type":"post",
+    "_id":1
+    }
+    
+<i class="fa fa-arrow-circle-right"></i> Ici, j'ai directement spécifié un *ID* pour mon document (1). Si rien n'est spécifié dans la requête, un identifiant sera 
+généré automatiquement par ElasticSearch.
+
+####Destruction d'un index
+``$ curl -XDELETE localhost:9200/blog``
+
+<i class="fa fa-exclamation-triangle"></i> Toutes les données relatives à l'index seront supprimées.
+
+####Fermeture d'un index
+``$ curl -XPOST localhost:9200/blog/_close``
+
+<i class="fa fa-arrow-circle-right"></i> Cette opération peut être utile afin de libérer de la ressource CPU & mémoire 
+sans supprimer les données.
+
+####Ouverture d'un index
+``$ curl -XPOST localhost:9200/blog/_open``
+
+####Rechercher un document
+Je veux par exemple faire une recherche *Full-text* dans l'index *blog* des posts où le terme *test* apparait:
+   
+    $ curl -XGET localhost:9200/blog/post/_search?q=test
+    
+Le résultat de cette requête de recherche sera de cette forme-là:
+
+    {
+    "took":3,"timed_out":false,
+    "_shards": {"total":5,"successful":5,"failed":0},
+    "hits":{"total":1,"max_score":0.095891505,"hits":
+    [{"_index":"blog","_type":"post","_id":"2","_score":0.095891505,
+    "_source":{"text": "Mon super post de test", "title": "Mon super post", "author": "Antoine JULLIEN"}}
+    ]}
+    }
+    
+La réponse contient effectivement un certain nombre d'information:
+
+* **took**: c'est simplement le temps écoulé pour exécuter la requête (en millisecond).
+* **time_out**: si oui ou nom la requête a expiré.
+* **_shards**: comment les partitions ont été sollicitées pour cette recherche, avec le nombre de succés et d'échecs. 
+* **hits**: correspond au résultat de la recherche, avec le nombre total de documents correspondant aux critères 
+(total), le document lui-même (_source), et la pertinence du document par rapport à la requête (_score). Le résultat est trié par 
+défaut sur cette pertinence.
+
+<i class="fa fa-info-circle"></i> ElasticSearch affiche seulement les dix premiers documents correspondant à la recherche. 
+Il existe une API afin de naviguer dans les résultats.
+ 
+#####Query DSL
+ElasticSearch dispose d'un langage puissant permettant de rechercher de manière fine certaines informations. Voici un exemple:
+
+    $ curl -XGET 'localhost:9200/blog/post/_search' -d '
+    {"query": 
+        {"match": {"text": "test"}}
+    }'
+    
+Je ne vais pas détailler toutes les fonctionnalités offertes par le langage d'interrogation. Je vous invite donc à regarder 
+la documentation [**QueryDSL**](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-queries.html).
+
+#Gestion du mapping
 // TODO
