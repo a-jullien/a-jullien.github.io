@@ -212,4 +212,83 @@ Je ne vais pas détailler toutes les fonctionnalités offertes par le langage d'
 la documentation [**QueryDSL**](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-queries.html).
 
 #Gestion du mapping
-// TODO
+Le *mapping* via ElasticSearch permet de définir comment traîter la recherche d'un document et comment les champs doivent
+être analysés.
+
+Un mapping est lié à un type de données (string, integer, long, float, double, boolean). Pour chacun des types, des paramètres 
+sont disponibles afin de traiter au mieux la recherche et son résultat. 
+
+    $ curl -XPUT 'http://localhost:9200/blog/post/_mapping' -d
+    '{
+        "post" : {
+            "properties" : {
+                "author" : {"type" : "string", "index" :"not_analyzed" }
+            }
+        }
+    }'
+
+Ici dans cet exemple, je spécifie que mon attribut *author* de mon document est de type *string* et doit être indexé 
+tel quel, en utilisant *not_analysed*.
+   
+Au même titre que la section **Query DSL**, la gestion du mapping de document est complexe, je ne vais pas détailler entièrement
+le processus du mapping. Moi-même je n'ai pas encore exploré toutes les possibilités autour de l'analyse de vos documents.
+A voir dans la documentation [**Mapping**](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping.html)
+pour plus d'information.
+
+
+#Agrégations
+Un mécanisme d'agrégation est disponible dans ElasticSearch (anciennement appelé *facets*, maintenant *deprecated*) afin 
+de pouvoir extraire et grouper vos données afin de les utiliser pour un traitement particulier, comme des statistiques par exemple.
+
+Voici un exemple simple afin d'extraire la liste des auteurs de posts dans le blog: 
+
+    $ curl -XPOST 'localhost:9200/blog/_search?pretty' -d
+    '{
+        "aggs":{
+            "genders" :{
+                "group_by_author": {"terms": {"field": "author"}}
+            }
+        }
+    }'
+
+Dans mon jeu de test, le résultat de cette requête ressemble à ceci:
+ 
+    {
+        "took" : 4,
+        "timed_out" : false,
+        "_shards" : {
+            "total" : 3,
+            "successful" : 3,
+            "failed" : 0
+        },
+        "hits" : {
+            "total" : 2,
+            "max_score" : 0.0,
+            "hits" : [ ... ]
+        },
+        "aggregations" : {
+            "group_by_author" : {
+                "buckets" : [ {
+                    "key" : "Antoine JULLIEN",
+                    "doc_count" : 1
+                }, {
+                    "key" : "Alex KID",
+                    "doc_count" : 1
+                }]
+            }
+        }
+    }
+    
+On voit bien ici que les auteurs des posts sont bien mis en exergue dans le tag *aggregations* du résultat de la requête.    
+
+#Conclusion
+Le but de ce premier billet technique était de vous présenter cette technologie d'indexation et de recherche 
+que nous fournit ElasticSearch. Nous avons de plus en plus besoin de recherche full-text ultra performantes dans nos applications, 
+et cela va de notre simple blog jusqu'à notre middleware distribué contenant des milliers de Teraoctets de données. Et 
+ElasticSearch peut effectivement être une solution, au même titre que l'est peut-être son concurrent [**Solr**](http://lucene.apache.org/solr/), 
+qui est lui-même encore une fois basé sur **Lucene**. Seulement, je ne peux pas comparer ces deux moteurs puisque je n'ai
+pas eu l'occasion de jouer avec **Solr**.
+
+En tout cas pour ElasticSearch, j'ai trouvé que sa mise en place et son utilisation sont vraiment simples et que cela peut
+vraiment apporter une valeur ajoutée à vos applications. De plus, l'API cliente est disponible dans la plupart des langages.
+Donc à vous de jouer !
