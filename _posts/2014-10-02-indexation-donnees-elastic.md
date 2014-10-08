@@ -29,7 +29,7 @@ d'écrire et de lire depuis ses index.
 * **Noeud**: C'est simplement une instance d'ElasticSearch.
 * **Cluster**: L'ensemble de noeuds.
 * **Partition** (shard): Gère le découpage des index en plusieurs ensembles afin de distribuer les documents
-* **Réplica**: Un répliqua permet de gérer la montée en charge lorsqu'un noeud n'est pas en mesure de traiter correctement 
+* **Réplica**: Un réplica permet de gérer la montée en charge lorsqu'un noeud n'est pas en mesure de traiter correctement 
 toutes les demandes.
  
 ![Architecture Elastic Search](/images/ES_Architecture.png){: .centeredImage}
@@ -40,7 +40,7 @@ Il en découle trois règles de fonctionnement au sein d'un cluster ElasticSearc
 
 * L'écriture d'un document est d'abord exécutée sur une partition dite primaire (*primary*).
 * Si l'écriture sur le primaire s'effectue correctement, l'action est propagée à toutes partitions secondaires du cluster.
-* Si un noeud primaire meurt, un répliqua est alors élu.
+* Si un noeud primaire meurt, un réplica est alors élu.
 
 Un noeud ElasticSearch a deux facettes. Tout d'abord, l'*arbitre* qui a pout but de traiter les requêtes de recherche 
 et les opérations. L'arbitre exécute ainsi une ou plusieurs opérations de type [**Map/Reduce**](http://fr.wikipedia.org/wiki/MapReduce) 
