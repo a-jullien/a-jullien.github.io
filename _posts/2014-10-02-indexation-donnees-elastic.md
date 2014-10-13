@@ -138,7 +138,7 @@ C'est à votre soin de protéger votre cluster, par l'ajout d'un *reverse proxy*
 
 Je veux par exemple indexer un document de type *post* dans l'index *blog*:
 
-    $ curl -XPUT localhost:9200/blog/post/1 -d 
+    $ curl -XPOST localhost:9200/blog/post/1 -d 
     '{
     "title": "Mon super post de test",
     "text": "Ma description du post",
@@ -249,7 +249,7 @@ afin d'extraire, de grouper vos données et de les utiliser pour un traitement p
 
 Voici un exemple simple afin d'extraire la liste des auteurs de posts dans le blog: 
 
-    $ curl -XPOST 'localhost:9200/blog/_search?pretty' -d
+    $ curl -XGET 'localhost:9200/blog/_search?pretty' -d
     '{
         "aggs":{
             "group_by_author": {"terms": {"field": "author"}}
