@@ -10,7 +10,7 @@ Dans le précédent post, je vous ai présenté le fonctionnement et l'utilisati
 un cas d'utilisation où nous utilisons à la fois les mécanismes de recherche mais aussi la couche de persistence.
 
       
-Dans ce billet, je vais expliquer comment ajouter un service de recherche ElasticSearch dans une application utilisant déjà une couche de persitence 
+Dans ce billet, je vais expliquer comment ajouter un service de recherche ElasticSearch dans une application utilisant déjà une couche de persistence 
 existante de type NoSQL comme [**MongoDB**](http://www.mongodb.org/), [**Redis**](http://redis.io/) ou [**Couchbase**](http://www.couchbase.com/fr) par exemple.
 
 #Plugin "River" d'ElasticSearch
@@ -34,7 +34,7 @@ Dans le cas où vous utilisez la version 1.2.2 d'ElasticSearch, vous pouvez util
 
 ``$ <ELASTIC_HOME_DIRECTORY>/bin/plugin --install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.1``
 
-<i class="fa fa-info-circle"></i> Sur son dépôt Github, Richard Louapre détaille quelle version d'ElasticSearch à utiliser avec son plugin. 
+<i class="fa fa-info-circle"></i> Sur son dépôt Github, Richard Louapre détaille les versions compatibles d'ElasticSearch avec celles de son plugin. 
 
 ####Installation manuelle
 
@@ -57,7 +57,7 @@ de faire une installation manuelle car ces versions ne sont pas encore supporté
 
 ``$ cp mongo-java-driver-2.12.3.jar <ELASTIC_HOME_DIRECTORY>/lib``
  
-Et voilà, l'installation du plugin *river* est terminée.
+Et voilà, l'installation du plugin **elasticsearch-river-mongodb** est terminée.
 
 #MongoDB
   
