@@ -6,8 +6,8 @@ tags: [elasticsearch, nosql, mongodb]
 categories: jekyll update
 ---
 
-Dans le précédent post, je vous ai présenté le fonctionnement et l'utilisation du moteur de recherche *ElasticSearch*, dans 
-un cas d'utilisation où nous utilisons à la fois les mécanismes de recherche mais aussi la couche de persistence.
+Dans le précédent post, j'ai présenté le fonctionnement et l'utilisation du moteur de recherche *ElasticSearch*, dans 
+un cas d'utilisation où nous utilisions à la fois ses mécanismes de recherche mais aussi sa couche de persistence.
 
       
 Dans ce billet, je vais expliquer comment ajouter un service de recherche ElasticSearch dans une application utilisant déjà une couche de persistence 
@@ -19,7 +19,7 @@ ElasticSearch dispose d'un mécanisme de gestion de plugin permettant d'augmente
 la visualisation et la supervision d'un cluster ElasticSearch (plugins *site*), ou encore l'indexation de données provenant 
 de sources différentes (plugin *river*). Ces plugins peuvent être soit développés et supportés directement par ElasticSearch ou soit 
 fournis par la communauté open-source puisque une API est disponible afin d'écrire soit-même son propre plugin.
-Ici, nous allons nous intéressé au plugin *river*, et plus particulièrement celui qui s'interface avec **MongoDB** écrit 
+Ici, nous allons nous intéresser au plugin *river*, et plus particulièrement à celui qui s'interface avec **MongoDB** écrit 
 par Richard Louapre ([**MongoDB river plugin**](https://github.com/richardwilly98/elasticsearch-river-mongodb)) pour illustrer 
 ce cas d'utilisation.
 
@@ -53,7 +53,7 @@ de faire une installation manuelle car ces versions ne sont pas encore supporté
 
 ``$ <ELASTIC_HOME_DIRECTORY>/bin/plugin --url "file://<PATH_ELASTIC_RIVER_PLUGIN>/target/elasticsearch-river-mongodb-<VERSION>.jar" --install elasticsearch-river-mongod``
 
-* Copie du driver mongodb
+* Copie du driver mongodb:
 
 ``$ cp mongo-java-driver-2.12.3.jar <ELASTIC_HOME_DIRECTORY>/lib``
  
@@ -75,10 +75,6 @@ base de données *blog* avec une collection *post*:
 <i class="fa fa-info-circle"></i> L'argument **\--replSet** permet de spécifier que notre instance appartient à un groupe de replicas.
 Cet argument est obligatoire car le plugin *elasticsearch-river-mongodb* utilise le mécanisme du **oplog** 
 (les logs d'opérations) afin de synchroniser et indexer les données contenues dans MongoDB. 
-
-* Démarrage du process **mongod**:
-
-``$ <MONGO_INSTALLATION>/bin/mongod --dbpath <PATH>/data --replSet rs0`` 
 
 * Déployer le groupe de replicas:
 
@@ -133,31 +129,34 @@ Vous pouvez vérifier que vos documents contenus dans MongoDB sont correctement 
                 "_type" : "post",
                 "_id" : "543c341154bb4eb903463c47",
                 "_score" : 1.0,
-                "_source":{"author":"Antoine JULLIEN","_id":"543c341154bb4eb903463c47","text":"A simple text of my first post","title":"My first post"}
+                "_source":{"author":"Antoine JULLIEN","_id":"543c341154bb4eb903463c47","text":"A simple text for my first post","title":"My first post"}
                 }, 
                 {
                 "_index" : "blog",
                 "_type" : "post",
                 "_id" : "543c4ff19e7c795cbfc0fe13",
                 "_score" : 1.0,
-                "_source":{"author":"Antoine JULLIEN","_id":"543c4ff19e7c795cbfc0fe13","text":"A simple text of my second post","title":"My second post"}
+                "_source":{"author":"Antoine JULLIEN","_id":"543c4ff19e7c795cbfc0fe13","text":"A simple text for my second post","title":"My second post"}
                 }, 
                 {
                 "_index" : "blog",
                 "_type" : "post",
                 "_id" : "543c340b54bb4eb903463c46",
                 "_score" : 1.0,
-                "_source":{"author":"Antoine JULLIEN","_id":"543c340b54bb4eb903463c46","text":"A simple text of my third post","title":"My third post"}
+                "_source":{"author":"Antoine JULLIEN","_id":"543c340b54bb4eb903463c46","text":"A simple text for my third post","title":"My third post"}
                 } 
             ]
         }
     }
 
-
-
 #Conclusion
 
-// TODO
+Via le plugin *river*, ElasticSearch permet d'indexer des données provenant de sources externes, à condition quand même d'avoir
+un modèle de données orienté document (un modèle relationnel ne sera pas vraiment adapté). L'avantage est, d'un point de vue 
+architecture, d'avoir une séparation logique entre la persistence des données (ici fournie par MongoDB), et le système de recherche 
+(fourni par ElasticSearch). A contrario, l'inconvénient dans cette architecture est la duplication de données. Effectivement, le plugin *river* 
+permet de déverser les données provenant de MongoDB afin de les indexer dans ElasticSearch. Ces données qui doivent être indexées pour la recherche 
+seront donc persistentes dans les deux systèmes. 
 
 
 
